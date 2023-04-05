@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button {
+    @apply font-heading font-black;
+  }
+}
+
+@layer base {
+  p {
+    @apply text-darkGrayishBlue;
+  }
+}
+
+img {
+  max-height: 680px;
+}
+
+.hero {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-in {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  max-width: 100%;
+  min-height: 800px;
+}
+
+.text-in-two {
+  background-image: url("../images/mobile/image-photography.jpg");
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.footer-img {
+  filter: invert(45%) sepia(22%) saturate(790%) hue-rotate(118deg)
+    brightness(95%) contrast(92%);
+}
+
+.social-icons-logo:hover {
+  filter: brightness(0) invert(1);
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 33px;
+  right: 23px;
+  width: 30px;
+  height: 1.5px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+  padding-right: 20px;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.nav-menu {
+  width: 85%;
+  min-width: 60%;
+  height: 50%;
+  min-height: 50px;
+  bottom: 36%;
+  right: 7%;
+  clip-path: polygon(
+    87% 12%,
+    100% 0,
+    100% 100%,
+    100% 100%,
+    0 100%,
+    0 100%,
+    0 12%
+  );
+}
+
+@media screen and (min-width: 768px) {
+  .underline-div:before {
+    width: 115px;
+  }
+
+  .text-in {
+    min-height: 700px;
+  }
+
+  .text-in-one {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+  }
+
+  .text-in-two {
+    background-image: url("../images/desktop/image-photography.jpg");
+  }
+}
+
+@media screen and (min-width: 545px) {
+  .hero {
+    background-image: url("../images/desktop/image-header.jpg");
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .hero {
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: contain;
+  }
+
+  .text-in {
+    min-height: 800px;
+  }
+}
